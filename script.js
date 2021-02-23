@@ -8,9 +8,11 @@ function addressGuess () {
   while (guess != randomAge) {
     if (guess < randomAge) {
       guess = prompt('Hmm, your guess is too low, try guessing higher.', 'Try a higher guess.')
-    } else {
+    } else if (guess > randomAge) {
       guess = prompt('Woah, your guess is too high! Lower! Lower!', 'Try a lower guess.')
+    } else {
+      guess = prompt('Something went wrong, make sure you are plugging in a numerical value.', 'Try a number.')
     }
   }
-  answer.innerHTML = 'Wow, you got it! Good stuff man! Click the button to play again!'
+  answer.innerHTML = 'Wow, you got it! ' + randomAge + ' was my age! Click the button to play again!'
 }
