@@ -1,11 +1,11 @@
 document.getElementById('button').addEventListener('click', addressGuess)
 
 function addressGuess () {
-  let randomAge = Math.floor(Math.random()*98)
-  let answer = document.getElementById('answer')
+  const randomAge = Math.floor(Math.random() * 98)
+  const answer = document.getElementById('answer')
   answer.innerHTML = 'The game has started! Keep plugging in numbers in the given prompt and see how many guesses it takes!'
-  var guess = prompt('Guess my age here!', 'Type my age here!')
-  while (guess != randomAge) {
+  let guess = prompt('Guess my age here!', 'Type my age here!')
+  while (guess !== randomAge) {
     if (guess < randomAge) {
       guess = prompt('Hmm, your guess is too low, try guessing higher.', 'Try a higher guess.')
     } else if (guess > randomAge) {
