@@ -3,7 +3,6 @@ document.getElementById('button').addEventListener('click', addressGuess)
 function addressGuess () {
   const randomAge = Math.floor(Math.random() * 98)
   const answer = document.getElementById('answer')
-  
   answer.innerHTML = 'The game has started! Keep plugging in numbers in the given prompt and see how many guesses it takes!'
   let guess = prompt('Guess my age here!', randomAge)
   guess = parseInt(guess)
